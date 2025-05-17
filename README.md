@@ -23,12 +23,19 @@ reset, so coordination between players is key.
 
 A window will open with two rectangles representing the players.
 
+The level layout now loads from `game/assets/level1.txt`, a simple text
+tilemap. Each `#` character represents a solid block that also uses graphics
+from `game/assets/tiles`. To customize the stage, edit this file or drop PNG
+tiles in the tiles directory.
+
 ### Controls
 - **Player 1:** `A` left, `D` right, `W` jump, `E` pass debuff
 - **Player 2:** Arrow keys to move, `Ctrl` (right) pass debuff
 
 Collide with your partner and press the pass key to hand over the debuff.
-If the timer expires on either player, the level resets and you start over.
+The debuff lasts 40 seconds and a countdown is displayed at the top of the
+screen. If the timer expires on either player, the level resets and you start
+over.
 
 This code is only a starting point. Expanding it with additional levels,
 mazes, traps, and networking would realize the full "Balance" game concept.
