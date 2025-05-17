@@ -53,7 +53,8 @@ class Player:
         self.rect.y -= 1
         return grounded
 
-    def draw(self, surface):
-        """Render the player as a colored rectangle."""
-        pygame.draw.rect(surface, self.color, self.rect)
+    def draw(self, surface, offset_x=0):
+        """Render the player as a colored rectangle with optional offset."""
+        offset_rect = self.rect.move(-offset_x, 0)
+        pygame.draw.rect(surface, self.color, offset_rect)
 
